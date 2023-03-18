@@ -200,6 +200,7 @@ public class BrowserUtilities {
         }
     }
 
+
     public static void waitForStaleElement(WebElement element) {
         int y = 0;
         while (y <= 15) {
