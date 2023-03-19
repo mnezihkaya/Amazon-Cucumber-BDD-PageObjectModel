@@ -234,6 +234,73 @@ Feature: User Should see the all module and submodules
     Then verify menu submodules
       | Amazon Physical Stores |
 
+  Scenario: User should see the submodule under all menu32
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "Make Money With Amazon"
+    And User should see 32 menu submodules
+    Then verify menu submodules
+      | Make Money With Amazon |
+
+  Scenario: User should see the submodule under all menu33
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "Home Services"
+    And User should see 33 menu submodules
+    Then verify menu submodules
+      | Home Services |
+
+  Scenario: User should see the submodule under all menu34
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "Gifting & Registry"
+    And User should see 34 menu submodules
+    Then verify menu submodules
+      | Gifting & Registry |
+
+  Scenario: User should see the submodule under all menu35
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "Gift Cards"
+    And User should see 35 menu submodules
+    Then verify menu submodules
+      | Give A Gift Card      |
+      | Manage Your Gift Card |
+
+  Scenario: User should see the submodule under all menu36
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "Credit & Payment Products"
+    And User should see 36 menu submodules
+    Then verify menu submodules
+      | Credit Cards     |
+      | Payment Products |
+
+  Scenario: User should see the submodule under all menu37
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "Amazon Subscription Boxes"
+    And User should see 37 menu submodules
+    Then verify menu submodules
+      | Subscription Boxes |
+
+  Scenario: User should see the submodule under all menu38
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "Amazon Live"
+    And User should see 38 menu submodules
+    Then verify menu submodules
+      | Amazon Live |
+
+  Scenario: User should see the submodule under all menu39
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "International Shopping"
+    And User should see 39 menu submodules
+    Then verify menu submodules
+      | International Shopping |
+
+  Scenario: User should see the submodule under all menu40
+    When user click the seeAllProgramsAndFeatures button to expand
+    And user should click "Small & Medium Businesses"
+    And User should see 40 menu submodules
+    Then verify menu submodules
+      | Small & Medium Businesses |
+
+
+
 
 
 
