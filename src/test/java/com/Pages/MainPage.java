@@ -25,6 +25,13 @@ public class MainPage {
     @FindBy(xpath = "//ul[@data-menu-id=\"1\"]//div[@class=\"hmenu-item hmenu-title \"]")
     public List<WebElement> all_rightModuleSubmodules_menu1_Title;
 
+    @FindBy(xpath = "//a[@class=\"hmenu-item hmenu-compressed-btn\"]/div[.=\"see all\"][1]")
+    public WebElement compressedSeeALLUnderShopByDepartment;
+
+    @FindBy(xpath = "(//a[@class=\"hmenu-item hmenu-compressed-btn\"]//div[.=\"see all\"])[2]")
+    public WebElement compressedSeeALLUnderProgramAndFeatures;
+
+
     /*
     @FindBy(xpath = "//ul[@data-menu-id=\"2\"]//div[@class=\"hmenu-item hmenu-title \"]")
     public List<WebElement> all_rightModuleSubmodulePrimeVideoSubmodule_Title;
