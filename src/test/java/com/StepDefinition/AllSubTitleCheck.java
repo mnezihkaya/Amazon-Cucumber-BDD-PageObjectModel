@@ -35,4 +35,16 @@ public class AllSubTitleCheck {
     public void userShouldClick(String submodule) {
         MainPage.DigitalContentSubmoduleName(submodule).click();
     }
+
+    @When("user click the seeAll button to expand")
+    public void userClickTheSeeAllButtonToExpand() {
+        BrowserUtilities.highlight(mainPage.compressedSeeALLUnderShopByDepartment);
+        mainPage.compressedSeeALLUnderShopByDepartment.click();
+    }
+
+    @When("user click the seeAllProgramsAndFeatures button to expand")
+    public void userClickTheSeeAllProgramsAndFeaturesButtonToExpand() {
+        BrowserUtilities.highlight(mainPage.compressedSeeALLUnderProgramAndFeatures);
+        mainPage.compressedSeeALLUnderProgramAndFeatures.click();
+    }
 }
