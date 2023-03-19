@@ -88,14 +88,14 @@ Feature: User Should see the all module and submodules
       | More To Explore                           |
 
   Scenario: User should see the submodule under all
-    And user should click "Clothing, Shoes, Jewelry & Watches"
+    And user should click "Amazon Fresh"
     And User should see 12 menu submodules
     Then verify menu submodules
       | Amazon Fresh |
 
   Scenario: User should see the submodule under all
     And user should click "Books"
-    And User should see 12 menu submodules
+    And User should see 13 menu submodules
     Then verify menu submodules
       | Books                     |
       | Audible Books & Originals |
@@ -105,9 +105,21 @@ Feature: User Should see the all module and submodules
 
   Scenario: User should see the submodule under all
     And user should click "Movies, Music & Games"
-    And User should see 13 menu submodules
+    And User should see 14 menu submodules
     Then verify menu submodules
-      | Movies, Music & Games                    |
+      | Movies, Music & Games |
+
+  Scenario: User should see the submodule under all
+    And user should click "Whole Foods Market"
+    And User should see 28 menu submodules
+    Then verify menu submodules
+      | Whole Foods Market |
+
+  Scenario: User should see the submodule under all
+    And user should click "Pharmacy"
+    And User should see 29 menu submodules
+    Then verify menu submodules
+      | Movies, Music & Games |
 
 
 
