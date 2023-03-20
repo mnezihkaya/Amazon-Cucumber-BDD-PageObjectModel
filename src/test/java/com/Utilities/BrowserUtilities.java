@@ -3,6 +3,7 @@ package com.Utilities;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -308,5 +309,10 @@ public class BrowserUtilities {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void VerifyBackgroundColorChange(WebElement webElement,String expectedColor){
+        String actualColor= Color.fromString(webElement.getCssValue("background-color")).asHex();
+        Assert.assertEquals(actualColor,expectedColor);
     }
 }
