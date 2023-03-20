@@ -9,17 +9,26 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
 public class SearchButton {
-    MainPage mainPage=new MainPage();
+    MainPage mainPage = new MainPage();
 
     @Given("user should on mainPage")
     public void userShouldOnMainPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("env"));
     }
+
     @And("verify title {string}")
     public void verifyTitle(String title) {
         BrowserUtilities.titleVerify(title);
     }
 
+    @And("verify color change when hover on the searchButton")
+    public void verifyColorChangeWhenHoverOnTheSearchButton() {
+        BrowserUtilities.highlight(mainPage.submitButtonColorChange);
+        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange,"#febd69");
+        BrowserUtilities.hover(mainPage.submitButtonColorChange);
+        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange,"#f3a847");
+
+    }
 
     @When("User click search area and write {string} and click submitButton")
     public void userClickSearchAreaAndWriteAndClickSubmitButton(String text) {
@@ -30,6 +39,7 @@ public class SearchButton {
         mainPage.submitButton.click();
 
     }
+
 
 
 }
