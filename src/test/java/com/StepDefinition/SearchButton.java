@@ -41,5 +41,12 @@ public class SearchButton {
     }
 
 
+    @And("verify color change when hover on the searchButton {string} and {string}")
+    public void verifyColorChangeWhenHoverOnTheSearchButtonAnd(String beforeColor, String afterColor) {
+        BrowserUtilities.highlight(mainPage.submitButtonColorChange);
+        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange,beforeColor);
+        BrowserUtilities.hover(mainPage.submitButtonColorChange);
+        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange,afterColor);
 
+    }
 }
