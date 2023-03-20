@@ -71,6 +71,9 @@ public class MainPage {
     @FindBy(xpath = "//input[@type=\"submit\"]")
     public WebElement submitButton;
 
+    @FindBy(xpath = "//div[@class=\"nav-search-submit nav-sprite\"]")
+    public WebElement submitButtonColorChange;
+
     //Main Page middle modules
     @FindBy(xpath = "//a[@class=\"nav-a  \"]")
     public List<WebElement> mainPageNavFill30Module;
