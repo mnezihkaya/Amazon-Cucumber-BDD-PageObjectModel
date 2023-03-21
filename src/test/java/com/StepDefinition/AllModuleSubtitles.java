@@ -24,24 +24,11 @@ public class AllModuleSubtitles {
 
     @Then("verify menu subtitles expectedSubmodules")
     public void verifyMenuSubtitlesExpectedSubmodules(List<String> expectedSubmodules) {
-        Assert.assertEquals(expectedSubmodules,actualModules);
-    }
-    /*
-    @Test
-    public void all() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
-        BrowserUtilities.highlight(mainPage.allNavLeft);
-        mainPage.all_rightModule.click();
-        BrowserUtilities.sleep(10);
-        mainPage.compressedSeeALLUnderShopByDepartment.click();
-        BrowserUtilities.sleep(10);
-        mainPage.compressedSeeALLUnderProgramAndFeatures.click();
-
-
-        System.out.println(MainPage.AllSubtitlesMenuNumberReturnListOfSubTitle(1));
-
+        Assert.assertEquals(expectedSubmodules, actualModules);
     }
 
-*/
+
+
+
 }
 
