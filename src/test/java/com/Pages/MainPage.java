@@ -25,6 +25,11 @@ public class MainPage {
     @FindBy(xpath = "//ul[@data-menu-id=\"1\"]//div[@class=\"hmenu-item hmenu-title \"]")
     public List<WebElement> all_rightModuleSubmodules_menu1_Title;
 
+    @FindBy(xpath = "//a[@class=\"hmenu-item\"]")
+    public List<WebElement> allRightModuleSubmodules458;
+
+    @FindBy(xpath = "//ul[@data-menu-id=\"1\"]//a[@class=\"hmenu-item\"]")
+    public List<WebElement>allFirstMenuSubmodule;
     @FindBy(xpath = "//a[@class=\"hmenu-item hmenu-compressed-btn\"]/div[.=\"see all\"][1]")
     public WebElement compressedSeeALLUnderShopByDepartment;
 
@@ -107,5 +112,18 @@ public class MainPage {
         return ActualElementsString;
 
     }
+    public static List<String> AllSubtitlesMenuNumberReturnListOfSubTitle(int menuNumber) {
+        List<WebElement> ActualElements = Driver.getDriver().findElements(By.xpath("//ul[@data-menu-id=\""+menuNumber+"\"]//a[@class=\"hmenu-item\"]"));
+
+        List<String> ActualElementsString = new ArrayList<>();
+
+        for (WebElement each : ActualElements) {
+            BrowserUtilities.highlight(each);
+            ActualElementsString.add(each.getText());
+        }
+        return ActualElementsString;
+
+    }
+
 
 }
