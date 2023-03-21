@@ -64,6 +64,21 @@ Feature: As a user, I should be able to Search the product on the mainPage.
       | United States                      |
       | Sign in                            |
 
+  Scenario: User Should see the subtitle of submodule under Prime Video
+    When user should click "Prime Video"
+    And user should see the all menu 2 subtitles of submodules
+    Then verify menu subtitles expectedSubmodules
+      | Prime Video         |
+      | Included with Prime  |
+      | Prime Video Channels |
+      | Rent or Buy          |
+      | Your Watchlist       |
+      | Purchases & Rentals  |
+      | Watch Anywhere       |
+      | Getting Started      |
+      | Amazon Originals     |
+      | Kids                 |
+
 
 
 
