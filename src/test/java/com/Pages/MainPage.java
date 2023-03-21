@@ -93,7 +93,7 @@ public class MainPage {
 
     //
     public static void ChooseAndCLickMainPageModule(String module) {
-        WebElement element = Driver.getDriver().findElement(By.xpath("//span[text()=\"+module+\"]"));
+        WebElement element = Driver.getDriver().findElement(By.xpath("//span[text()=\""+module+"]"));
         BrowserUtilities.highlight(element);
         element.click();
         BrowserUtilities.waitForPageToLoad(ConfigurationReader.getNumber("timeout"));
