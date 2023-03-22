@@ -83,14 +83,32 @@ public class MainPage {
     @FindBy(xpath = "//a[@class=\"nav-a  \"]")
     public List<WebElement> mainPageNavFill30Module;
 
+    //SelectYourAddress.feature
+    @FindBy(xpath = "//span[@class=\"nav-line-2 nav-progressive-content\"]")
+    public WebElement SelectYourAddress;
+
+    //Language Module and Submodules
+
+    @FindBy(xpath = "//a[@id=\"icp-nav-flyout\"]")
+    public WebElement chooseLanguageForShopping;
+
+    @FindBy(linkText = "Learn more")
+    public WebElement learnMore;
+
+    @FindBy(xpath = "//i[@class=\"icp-radio\"]")
+    public WebElement RadioButton;
+
+    @FindBy(xpath = "//div[@class=\"icp-mkt-change-lnk\"]")
+    public WebElement changeCountryRegion;
+
+
+
     //Digital Content & Devices submodules
 
     public static WebElement DigitalContentSubmoduleName(String DigitalContentSubmoduleName) {
         WebElement element = Driver.getDriver().findElement(By.xpath("//div[.=\"" + DigitalContentSubmoduleName + "\"]"));
         return element;
     }
-
-
     //
     public static void ChooseAndCLickMainPageModule(String module) {
         WebElement element = Driver.getDriver().findElement(By.xpath("//span[text()=\""+module+"]"));
@@ -98,7 +116,6 @@ public class MainPage {
         element.click();
         BrowserUtilities.waitForPageToLoad(ConfigurationReader.getNumber("timeout"));
     }
-
 
     public static List<String> AllSubtitlesMenuNumberReturnListOfTitle(int menuNumber) {
         List<WebElement> ActualElements = Driver.getDriver().findElements(By.xpath("//ul[@data-menu-id=\"" + menuNumber + "\"]//div[@class=\"hmenu-item hmenu-title \"]"));
