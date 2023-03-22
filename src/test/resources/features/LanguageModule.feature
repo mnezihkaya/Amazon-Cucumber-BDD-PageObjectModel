@@ -15,7 +15,7 @@ Feature: User Should see language options
     And user Should see Change Country Region Link
     And  user should click Change Country Region Link
     Then verify title "Go to website"
-    And select country "Turkey"
+    And select country "Turkey (Türkiye)"
 
 
        #And User should see the two radio option
