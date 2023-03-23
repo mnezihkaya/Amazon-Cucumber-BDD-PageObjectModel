@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class ChangeCountryRegion {
 
     public ChangeCountryRegion(){
@@ -14,7 +16,13 @@ public class ChangeCountryRegion {
     public WebElement SelectYourPreferredCountry;
 
     @FindBy(xpath = "//select[@id=\"icp-dropdown\"]")
-    public WebElement countries;
+    public List<WebElement> countries;
+
+    @FindBy(xpath = "//select[@id=\"icp-dropdown\"]")
+    public WebElement country;
+
+    @FindBy(xpath = "//span[@class=\"a-dropdown-prompt\"]")
+    public WebElement chosenCountry;
 
 
 
