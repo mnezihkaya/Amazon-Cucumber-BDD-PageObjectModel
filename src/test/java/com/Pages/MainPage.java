@@ -66,6 +66,15 @@ public class MainPage {
     public List<WebElement> all_rightModuleSubmoduleAmazonAppStoreSubmodule_Title;
 */
 
+
+    //you are shopping on Amazon
+
+    @FindBy(xpath = "//i[@class=\"icp-flyout-flag icp-flyout-flag-us\"]")
+    public WebElement youAreShoppingOnMessage;
+
+    @FindBy(xpath = "//span[.=\"Amazon.com\"]")
+    public WebElement amazonComMessage;
+
     @FindBy(id = "nav-hamburger-menu")
     public WebElement allNavLeft;
 
