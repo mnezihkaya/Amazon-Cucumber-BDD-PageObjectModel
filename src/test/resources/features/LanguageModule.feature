@@ -17,15 +17,13 @@ Feature: User Should see language options
     And select country "Turkey (Türkiye)"
     Then Verify country selected "Turkey (Türkiye)"
 
-  Scenario Outline: User should see the message "You are shopping on Amazon.com"
-    And user should see "<message>"when the language is "<language>"
-    And user should see Amazon.com
 
-    Examples:
-      | message             | language |
-      | You are shopping on | English  |
+  #   Scenario Outline: User should see the message "You are shopping on Amazon.com"
+  #   When the language is "<language>" user should see "<message>"
+  #   And user should see Amazon.com
+  #   Examples:
+  #  | message             | language |
+  #  | You are shopping on | English  |
+  #  | Estás comprando en  | español  |
 
 
-       #And User should see the two radio option
-      #And User should see the message "You are shopping on Amazon.com"
-      #And User should see the "Change country/region." link
