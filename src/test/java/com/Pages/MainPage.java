@@ -100,8 +100,23 @@ public class MainPage {
     public List<WebElement> mainPageNavFill30Module;
 
     //SelectYourAddress.feature
-    @FindBy(xpath = "//span[@class=\"nav-line-2 nav-progressive-content\"]")
+    @FindBy(xpath = "//*[@id=\"nav-global-location-popover-link\"]")
     public WebElement SelectYourAddress;
+
+    @FindBy(xpath = "//*[@id=\"a-popover-header-1\"]")
+    public WebElement chooseYourLocationPopUpHeadLine;
+
+    @FindBy(xpath = "//input[@id=\"GLUXZipUpdateInput\"]")
+    public WebElement chooseYourLocationEnterZipcodeArea;
+
+    @FindBy(xpath = "//*[@id=\"GLUXZipUpdate\"]/span/input")
+    public WebElement  chooseYourLocationApplyButton;
+
+    @FindBy(xpath = "//*[@id=\"GLUXZipConfirmationSection\"]/div/text()[2]")
+    public WebElement confirmationValueOfZipcode;
+
+    @FindBy(xpath = "//*[@id=\"GLUXChangePostalCodeLink\"]")
+    public WebElement changeButton;
 
     //Language Module and Submodules
     @FindBy(xpath = "//a[@id=\"icp-nav-flyout\"]")
