@@ -7,11 +7,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class LanguageModule {
     MainPage mainPage = new MainPage();
@@ -59,17 +57,18 @@ public class LanguageModule {
         Assert.assertEquals(changeCountryRegion.chosenCountry.getText(), country);
     }
 
-
-    @And("user should see {string}when the language is {string}")
-    public void userShouldSeeWhenTheLanguageIs(String message, String language) {
-        BrowserUtilities.highlight(mainPage.youAreShoppingOnMessage);
-       // Assert.assertEquals(message,mainPage.youAreShoppingOnMessage.getText());
-
-
-    }
-
     @And("user should see Amazon.com")
     public void userShouldSeeAmazonCom() {
         Assert.assertEquals("Amazon.com",mainPage.amazonComMessage.getText());
     }
+/*
+    @When("the language is {string} user should see {string}")
+    public void theLanguageIsUserShouldSee(String language, String message) {
+        MainPage.languageRadioButton(language);
+        BrowserUtilities.sleep(5);
+        Assert.assertEquals(message,mainPage.youAreShoppingOnMessage.getText());
+
+    }
+*/
 }
+
