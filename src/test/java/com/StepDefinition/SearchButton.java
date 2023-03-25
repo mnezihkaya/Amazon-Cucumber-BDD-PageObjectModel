@@ -6,7 +6,11 @@ import com.Utilities.ConfigurationReader;
 import com.Utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class SearchButton {
     MainPage mainPage = new MainPage();
@@ -24,9 +28,9 @@ public class SearchButton {
     @And("verify color change when hover on the searchButton")
     public void verifyColorChangeWhenHoverOnTheSearchButton() {
         BrowserUtilities.highlight(mainPage.submitButtonColorChange);
-        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange,"#febd69");
+        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange, "#febd69");
         BrowserUtilities.hover(mainPage.submitButtonColorChange);
-        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange,"#f3a847");
+        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange, "#f3a847");
 
     }
 
@@ -44,9 +48,24 @@ public class SearchButton {
     @And("verify color change when hover on the searchButton {string} and {string}")
     public void verifyColorChangeWhenHoverOnTheSearchButtonAnd(String beforeColor, String afterColor) {
         BrowserUtilities.highlight(mainPage.submitButtonColorChange);
-        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange,beforeColor);
+        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange, beforeColor);
         BrowserUtilities.hover(mainPage.submitButtonColorChange);
-        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange,afterColor);
+        BrowserUtilities.VerifyBackgroundColorChange(mainPage.submitButtonColorChange, afterColor);
+
+    }
+
+    @When("user click the All button")
+    public void userClickTheAllButton() {
+        BrowserUtilities.highlight(mainPage.allNextToSearchBox);
+        mainPage.allNextToSearchBox.click();
+    }
+
+    @Then("user should see the dropdown menu")
+    public void userShouldSeeTheDropdownMenu() {
+        Select dropdown = new Select(mainPage.allNextToSearchBoxDropDown);
+        dropdown.getOptions();
+
+
 
     }
 }
