@@ -21,4 +21,7 @@ Feature: As a user, I should be able to Search the product on the mainPage.
       | vitamin     | Amazon.com : vitamin  |
       | iphone      | Amazon.com : iphone   |
 
+    Scenario: Verify user can click the All button
+      When user click the All button
+      Then user should see the dropdown menu
 
