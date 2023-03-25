@@ -34,7 +34,7 @@ public class MainPage {
     public WebElement compressedSeeALLUnderProgramAndFeatures;
 
 
-    /*
+
     @FindBy(xpath = "//ul[@data-menu-id=\"2\"]//div[@class=\"hmenu-item hmenu-title \"]")
     public List<WebElement> all_rightModuleSubmodulePrimeVideoSubmodule_Title;
 
@@ -61,8 +61,6 @@ public class MainPage {
 
     @FindBy(xpath = "//ul[@data-menu-id=\"10\"]//div[@class=\"hmenu-item hmenu-title \"]")
     public List<WebElement> all_rightModuleSubmoduleAmazonAppStoreSubmodule_Title;
-*/
-
 
     //you are shopping on Amazon
     @FindBy(xpath = "//*[@id=\"nav-flyout-icp\"]/div[2]/span[2]/span/text()")
@@ -88,6 +86,12 @@ public class MainPage {
     //search Box menu
     @FindBy(id = "twotabsearchtextbox")
     public WebElement searchBox;
+
+    @FindBy(xpath = "//div[@id=\"nav-search-dropdown-card\"]/..")
+    public WebElement allNextToSearchBox;
+
+    @FindBy(xpath = "//select[@id=\"searchDropdownBox\"]")
+    public WebElement allNextToSearchBoxDropDown;
 
     @FindBy(xpath = "//input[@type=\"submit\"]")
     public WebElement submitButton;
