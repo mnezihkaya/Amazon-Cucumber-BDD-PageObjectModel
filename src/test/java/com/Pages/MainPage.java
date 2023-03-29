@@ -34,7 +34,6 @@ public class MainPage {
     public WebElement compressedSeeALLUnderProgramAndFeatures;
 
 
-
     @FindBy(xpath = "//ul[@data-menu-id=\"2\"]//div[@class=\"hmenu-item hmenu-title \"]")
     public List<WebElement> all_rightModuleSubmodulePrimeVideoSubmodule_Title;
 
@@ -74,8 +73,8 @@ public class MainPage {
     @FindBy(xpath = "//span[.=\"English\"]")
     public WebElement LanguageEnglishRadioButton;
 
-    public static void languageRadioButton(String language){
-        WebElement element = Driver.getDriver().findElement(By.xpath("//span[.=\""+language+"\"]"));
+    public static void languageRadioButton(String language) {
+        WebElement element = Driver.getDriver().findElement(By.xpath("//span[.=\"" + language + "\"]"));
         BrowserUtilities.highlight(element);
         element.click();
     }
@@ -114,7 +113,7 @@ public class MainPage {
     public WebElement chooseYourLocationEnterZipcodeArea;
 
     @FindBy(xpath = "//*[@id=\"GLUXZipUpdate\"]/span/input")
-    public WebElement  chooseYourLocationApplyButton;
+    public WebElement chooseYourLocationApplyButton;
 
     @FindBy(xpath = "//*[@id=\"GLUXZipConfirmationSection\"]/div/text()[2]")
     public WebElement confirmationValueOfZipcode;
@@ -143,7 +142,6 @@ public class MainPage {
         return element;
     }
 
-    //
     public static void ChooseAndCLickMainPageModule(String module) {
         WebElement element = Driver.getDriver().findElement(By.xpath("//span[text()=\"" + module + "]"));
         BrowserUtilities.highlight(element);
@@ -177,5 +175,8 @@ public class MainPage {
 
     }
 
+    //customer service
+    @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[2]")
+    public WebElement customerService;
 
 }
