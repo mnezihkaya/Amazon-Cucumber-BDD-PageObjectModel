@@ -6,9 +6,9 @@ import io.cucumber.java.en.When;
 
 public class CustomerService {
     MainPage mainPage=new MainPage();
-    @When("User click customerService")
-    public void userClickCustomerService() {
-        BrowserUtilities.highlight(mainPage.customerService);
-        mainPage.customerService.click();
+
+    @When("User click {string}")
+    public void userClick(String module) {
+        MainPage.ChooseAndCLickMainPageModule(module);
     }
 }
