@@ -143,11 +143,12 @@ public class MainPage {
     }
 
     public static void ChooseAndCLickMainPageModule(String module) {
-        WebElement element = Driver.getDriver().findElement(By.xpath("//span[text()=\"" + module + "]"));
+        WebElement element = Driver.getDriver().findElement(By.xpath("//div[@id=\"nav-xshop\"]//a[.=\""+module+"\"]"));
         BrowserUtilities.highlight(element);
         element.click();
         BrowserUtilities.waitForPageToLoad(ConfigurationReader.getNumber("timeout"));
     }
+
 
     public static List<String> AllSubtitlesMenuNumberReturnListOfTitle(int menuNumber) {
         List<WebElement> ActualElements = Driver.getDriver().findElements(By.xpath("//ul[@data-menu-id=\"" + menuNumber + "\"]//div[@class=\"hmenu-item hmenu-title \"]"));
