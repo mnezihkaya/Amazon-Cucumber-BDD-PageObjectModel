@@ -136,19 +136,18 @@ public class MainPage {
 
 
     //Digital Content & Devices submodules
-
     public static WebElement DigitalContentSubmoduleName(String DigitalContentSubmoduleName) {
         WebElement element = Driver.getDriver().findElement(By.xpath("//div[.=\"" + DigitalContentSubmoduleName + "\"]"));
         return element;
     }
 
+    //main Menu
     public static void ChooseAndCLickMainPageModule(String module) {
-        WebElement element = Driver.getDriver().findElement(By.xpath("//div[@id=\"nav-xshop\"]//a[.=\""+module+"\"]"));
+        WebElement element = Driver.getDriver().findElement(By.xpath("//div[@id=\"nav-xshop\"]//a[.=\"" + module + "\"]"));
         BrowserUtilities.highlight(element);
         element.click();
         BrowserUtilities.waitForPageToLoad(ConfigurationReader.getNumber("timeout"));
     }
-
 
     public static List<String> AllSubtitlesMenuNumberReturnListOfTitle(int menuNumber) {
         List<WebElement> ActualElements = Driver.getDriver().findElements(By.xpath("//ul[@data-menu-id=\"" + menuNumber + "\"]//div[@class=\"hmenu-item hmenu-title \"]"));
@@ -176,8 +175,5 @@ public class MainPage {
 
     }
 
-    //customer service
-    @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[2]")
-    public WebElement customerService;
 
 }
