@@ -19,7 +19,6 @@ public class MainPage {
 
 
     //RightSide-All and its submodules
-
     @FindBy(xpath = "//div[@id=\"nav-main\"]//span[text()=\"All\"]")
     public WebElement all_rightModule;
     @FindBy(xpath = "//ul[@data-menu-id=\"1\"]//div[@class=\"hmenu-item hmenu-title \"]")
@@ -129,10 +128,13 @@ public class MainPage {
     public WebElement learnMore;
 
     @FindBy(xpath = "//i[@class=\"icp-radio\"]")
-    public WebElement RadioButton;
+    public WebElement radioButton;
 
     @FindBy(xpath = "//div[@class=\"icp-mkt-change-lnk\"]")
     public WebElement changeCountryRegion;
+
+    //Returns and Orders
+    @FindBy(id = "nav-orders") public WebElement returnsAndOrders;
 
 
     //Digital Content & Devices submodules
