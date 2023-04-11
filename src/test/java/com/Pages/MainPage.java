@@ -80,7 +80,8 @@ public class MainPage {
 
     @FindBy(id = "nav-hamburger-menu")
     public WebElement allNavLeft;
-
+//cart on main page
+    @FindBy(id="nav-cart-count-container") public WebElement cart;
     //search Box menu
     @FindBy(id = "twotabsearchtextbox")
     public WebElement searchBox;
