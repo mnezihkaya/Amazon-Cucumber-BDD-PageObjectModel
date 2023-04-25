@@ -77,10 +77,11 @@ public class MainPage {
         BrowserUtilities.highlight(element);
         element.click();
     }
-
+    //HelloSignIn
+    @FindBy(xpath = "//a[@id=\"nav-link-accountList\"]") public WebElement helloSignIn;
     @FindBy(id = "nav-hamburger-menu")
     public WebElement allNavLeft;
-//cart on main page
+    //cart on main page
     @FindBy(id="nav-cart-count-container") public WebElement cart;
     //search Box menu
     @FindBy(id = "twotabsearchtextbox")
